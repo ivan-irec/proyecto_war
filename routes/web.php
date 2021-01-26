@@ -16,8 +16,6 @@ Route::get('/', function () {
 });
 
 
-
-
 //Route::get('/estudiantes', 'EstudianteController@index');
 
 //Route::get('/estudiantes/create','EstudianteController@create');
@@ -27,6 +25,19 @@ Route::get('/', function () {
 //});
 
 Route::resource('estudiantes','EstudianteController') ->middleware('auth');
-Auth::routes(['register'=>false,'reset'=>false ]); //elimina registro y recupera contraseña
+
+//GRUPOS
+//Route::get('/grupos', 'GruposController@index');
+//Route::get('/grupos/create', function () {
+//    return view('grupos.create');
+//});
+
+Route::resource('grupos','GruposController') ->middleware('auth');
+
+
+
+//Route::resource('grupos','GruposController') ->middleware('auth');
+
+Auth::routes(['reset'=>false ]); //elimina registro y recupera contraseña register'=>false,
 
 Route::get('/home', 'HomeController@index')->name('home');

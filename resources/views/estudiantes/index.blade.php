@@ -52,7 +52,7 @@
                 {{ csrf_field() }}
                 {{ method_field('DELETE')}} 
 
-                <button class="btn btn-outline-danger" type="submit" onclick="return confirm('¿Borrar Esuudiante?')">Eliminar</button>
+                <button class="btn btn-outline-danger" type="submit" onclick="return confirm('¿Borrar Estudiante?')">Eliminar</button>
 
             </form>   
 
