@@ -45,10 +45,11 @@ class EstudianteController extends Controller
             'Nombre' => 'required|string|max:100',
             'ApellidoPaterno' => 'required|string|max:100',
             'ApellidoMaterno' => 'required|string|max:100',
-            'Edad' => 'required|integer|max:1',
+            'Edad' => 'required|string|max:100',
             'Email'=> 'required|email',
-            'Telefono' => 'required|integer|max:10',
+            'Telefono' => 'required|string|max:100',
         ];
+
 
         $Mensaje=["required"=>'El :attribute es requerido'];
         $this->validate($request,$campos,$Mensaje);
@@ -106,10 +107,11 @@ class EstudianteController extends Controller
             'Nombre' => 'required|string|max:100',
             'ApellidoPaterno' => 'required|string|max:100',
             'ApellidoMaterno' => 'required|string|max:100',
-            'Edad' => 'required|integer',
+            'Edad' => 'required|string|max:100',
             'Email'=> 'required|email',
-            'Telefono' => 'required|integer',
+            'Telefono' => 'required|string|max:100',
         ];
+
 
         $Mensaje=["required"=>'El :attribute es requerido'];
         $this->validate($request,$campos,$Mensaje);
